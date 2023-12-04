@@ -7,7 +7,7 @@ export const menu: CoreMenu[] = [
     translate: "MENU.ORDERS",
     type: "item",
     icon:"../../assets/images/myimages/Group 40292.png",
-    url: "dashboard/order",
+    url: "dashboard/orders",
   },
  /*  {
     id: "orders",
@@ -18,7 +18,7 @@ export const menu: CoreMenu[] = [
   }, */
   {
     id: "allOutlet",
-    title: "",
+    title: "AllOutlet",
     translate: "MENU.ALLOUTLET",
     type: "item",
     icon:"../../assets/images/myimages/Group 40294.png",
@@ -26,7 +26,7 @@ export const menu: CoreMenu[] = [
   },
   {
     id: "ticket",
-    title: "",
+    title: "Ticket",
     translate: "MENU.TICKET",
     type: "item",
     icon:"../../assets/images/navbaricon/Group 40275.png/",
@@ -34,7 +34,7 @@ export const menu: CoreMenu[] = [
   },
   {
     id: "promotion",
-    title: "",
+    title: "Promotion",
     translate: "MENU.PROMOTION",
     type: "item",
     icon:"../../assets/images/navbaricon/Group 40276.png/",
@@ -42,7 +42,7 @@ export const menu: CoreMenu[] = [
   },
   {
     id: "Account",
-    title: "",
+    title: "Account",
     translate: "MENU.ACCOUNT",
     type: "item",
     icon:"../../assets/images/myimages/Group 40291.png/",

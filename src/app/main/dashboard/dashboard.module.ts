@@ -33,7 +33,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   }, */
   {
-    path: "order",
+    path: "orders",
     component: HomeComponent,
     canActivate: [AuthGuard],
   },

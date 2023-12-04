@@ -11,7 +11,7 @@ import { AuthLoginV2Component } from 'app/main/pages/authentication/auth-login-v
 
 // routing
 const routes: Routes = [
-  {
+  {  
     path: 'authentication/login-v2',
     component: AuthLoginV2Component,
     data: { animation: 'auth' }
