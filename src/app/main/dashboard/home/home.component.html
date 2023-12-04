@@ -1,0 +1,181 @@
+<section id=" home-page">
+  <div class="row">
+    <div class="col-sm-6 col-xl-3 mb-2 mb-xl-0">
+      <div class="media">
+        <div class="media-body my-auto">
+          <h4 class="font-weight-normal  mb-0">Total Sales</h4>
+          <p class="card-text mb-0"> {{ AllData?.totalSale }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-3 mb-2 mb-xl-0">
+      <div class="media">
+        <div class="media-body my-auto">
+          <h4 class="font-weight-normal  mb-0">Total Order Count</h4>
+          <p class="card-text mb-0"> {{ AllData?.orderCount }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-3 mb-2 mb-sm-0">
+      <div class="media">
+        <div class="media-body my-auto">
+          <h4 class="font-weight-normal  mb-0">Total Discount</h4>
+          <p class="card-text mb-0"> {{ AllData?.totalDiscount }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+      <div class="media">
+        <div class="media-body my-auto">
+          <h4 class="font-weight-normal  mb-0">Total Net Profit</h4>
+          <p class="card-text mb-0"> {{ AllData?.netProfit }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 
+<div class="order">
+  <div class="card card-congratulation-medal">
+    <div class="card-body">
+      <div class="row match-height">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card-body">
+            <div class="outlet-body">
+              <div class="parent1">
+                <div class="area-parent">
+                  <h5>anjai</h5>
+                  <p class="card-details-text font-small-3">avijaynagar</p>
+                </div>
+                <div class="detail-card">
+                  <p class="detail-card-text1">fjhyi56758</p>
+                  <p class="detail-card-text">21652654287</p>
+                </div>
+              </div>
+
+              <div class="order-btn">
+                <a class="btn1" href="">Mark as Ready</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+<div class="order">
+  <div class="card card-congratulation-medal">
+    <div class="card-body">
+      <!-- <div class="top-buttons">
+        <a href=""><span>Cooking</span></a>
+        <a href="">Ready</a>
+        <a href="">PickUp</a>
+      </div> -->
+      <ul ngbNav #nav="ngbNav" class="nav-tabs ">
+        <li ngbNavItem>
+          <div class="top-buttons">
+            <a ngbNavLink>Cooking</a>
+          </div>
+
+          <ng-template ngbNavContent>
+            <div class="row match-height">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card-body">
+                  <div class="outlet-body">
+                    <div class="parent1">
+                      <div class="area-parent">
+                        <h5>anjai</h5>
+                        <p class="card-details-text font-small-3">avijaynagar</p>
+                      </div>
+                      <div class="detail-card">
+                        <p class="detail-card-text1">fjhyi56758</p>
+                        <p class="detail-card-text">21652654287</p>
+                      </div>
+                    </div>
+
+                    <div class="order-btn">
+                      <a class="btn1" href="">Mark as Ready</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card-body">
+                  <div class="outlet-body">
+                    <div class="parent1">
+                      <div class="area-parent">
+                        <h5>anjai</h5>
+                        <p class="card-details-text font-small-3">avijaynagar</p>
+                      </div>
+                      <div class="detail-card">
+                        <p class="detail-card-text1">fjhyi56758</p>
+                        <p class="detail-card-text">21652654287</p>
+                      </div>
+                    </div>
+
+                    <div class="order-btn">
+                      <a class="btn1" href="">Mark as Ready</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card-body">
+                  <div class="outlet-body">
+                    <div class="parent1">
+                      <div class="area-parent">
+                        <h5>anjai</h5>
+                        <p class="card-details-text font-small-3">avijaynagar</p>
+                      </div>
+                      <div class="detail-card">
+                        <p class="detail-card-text1">fjhyi56758</p>
+                        <p class="detail-card-text">21652654287</p>
+                      </div>
+                    </div>
+
+                    <div class="order-btn">
+                      <a class="btn1" href="">Mark as Ready</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+        <li ngbNavItem>
+          <div class="top-buttons">
+            <a ngbNavLink>Ready</a>
+          </div>
+
+          <ng-template ngbNavContent>
+            <p>
+
+            </p>
+          </ng-template>
+        </li>
+
+        <li ngbNavItem>
+          <div class="top-buttons">
+            <a ngbNavLink>PickUp</a>
+          </div>
+
+          <ng-template ngbNavContent>
+            <p>
+
+            </p>
+          </ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+    </div>
+  </div>
+</div>

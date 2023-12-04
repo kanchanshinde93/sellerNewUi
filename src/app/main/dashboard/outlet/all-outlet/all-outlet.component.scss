@@ -1,0 +1,140 @@
+.order-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  border-radius: 13px;
+  background-color: #F8F9FD;
+  display: grid;
+  padding: 1.5rem;
+  // box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; 
+  align-items: center;
+}
+
+.card-body h1 {
+  padding-top: 22px;
+}
+
+.card-congratulations {
+  background: white;
+  color: #000000;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+}
+
+.parent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn1 {
+  background-color: #148AE5;
+  color: #fff !important;
+  padding: 5px 29px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.btn2 {
+  background-color: #0FAB64;
+  color: #fff !important;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  padding: 0 45px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.btn3 {
+  background-color: #EC0A37;
+  color: #fff !important;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  padding: 0 45px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.details-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-body h5 {
+  font-size: 20px;
+}
+
+
+
+.order-body h1 {
+  font-size: 24px;
+  color: black;
+}
+
+.details-btn {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.order-body h5 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: black;
+}
+
+.green-button {
+  background-color: green;
+  color: white;
+}
+
+.red-button {
+  background-color: red;
+  color: white;
+}
+
+.detail-card {
+  display: grid;
+  justify-items: end;
+}
+
+// model css
+button.model-btn {
+  background-color: #EC0A37;
+  color: #fff !important;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  padding: 6px 45px;
+  border: none;
+}
+
+button.model-btn1 {
+  background-color: #0FAB64;
+  color: #fff !important;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  padding: 6px 45px;
+  border: none;
+}
+
+.modal-body {
+  font-size: 19px;
+  color: black;
+}
+
+.modal-footer {
+  border: none;
+}

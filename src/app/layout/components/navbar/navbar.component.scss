@@ -1,0 +1,94 @@
+@import '@core/scss/base/bootstrap-extended/include'; // Bootstrap includes
+@import '@core/scss/base/components/include'; // Components includes
+
+// To open dd on right
+.dropdown-menu-right {
+  right: 0 !important;
+  left: auto !important;
+}
+
+// Cart Touchspin
+.touchspin-cart {
+  .touchspin-wrapper {
+    width: 6.4rem;
+  }
+
+  &:focus-within {
+    box-shadow: none !important;
+  }
+}
+
+app-navbar-bookmark {
+  display: flex;
+}
+
+// Apply style on window scroll for navbar static type
+.navbar-static-style-on-scroll {
+  background-color: #fff !important;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 0px !important;
+}
+
+// Dark Layout
+.dark-layout {
+  .navbar-container {
+    .search-input {
+      .search-list {
+        li {
+          &.auto-suggestion {
+            &:hover {
+              background-color: $theme-dark-body-bg;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.header-navbar.navbar-shadow {
+  /* box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1); */
+  background-color: #f8f8f8;
+  box-shadow: none;
+}
+
+.header-navbar .navbar-container ul.navbar-nav li a.dropdown-user-link .user-status {
+  /* font-size: smaller; */
+  font-size: 16px;
+  color: #142017;
+}
+
+span.avatar img {
+  height: 84px;
+  width: 84px;
+}
+
+.header-navbar .navbar-container ul.navbar-nav li a.dropdown-user-link .user-nav {
+
+  margin-right: 1.8rem;
+}
+
+.header-navbar .navbar-container ul.navbar-nav li a.dropdown-user-link .user-name {
+  display: inline-block;
+  margin-bottom: 1.435rem;
+  margin-left: 0.2rem;
+  letter-spacing: 2px;
+}
+
+span.user-status {
+  letter-spacing: 2px;
+}
+
+span.user-name.font-weight-light {
+  color: #24C249;
+  font-size: 22px;
+}
+
+.navbar-container.d-flex.content {
+  font-family: 'Outfit-Regular';
+}
+
+h4.nav-item.d-none.d-lg-block {
+  font-size: 24px;
+  color: black;
+}

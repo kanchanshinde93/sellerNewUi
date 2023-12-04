@@ -1,0 +1,136 @@
+@import '@core/scss/base/bootstrap-extended/include'; // Bootstrap includes
+@import '@core/scss/base/pages/page-auth.scss';
+
+.auth-help-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+// my css
+.login-wrapper {
+  // background: url(../images/pages/login.svg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  padding: 150px 0px 0px 0px;
+}
+
+.login-wrapper .card {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: linear-gradient(111.36deg, #25425F 6.41%, #88CBEA 105.25%);
+}
+
+.login-wrapper .card .card-body {
+  padding: 0;
+}
+
+.login-img img {
+  width: 100%;
+  height: 500px;
+}
+
+.login-img {
+  padding: 50px;
+  background: linear-gradient(111.36deg, #94b2d1 6.41%, #88CBEA 105.25%);
+  z-index: 999999;
+  position: relative;
+  border-radius: 50px 0px 0px 50px;
+}
+
+.login-wrapper .card .col-md-7,
+.login-wrapper .card .col-md-5 {
+  padding: 0;
+}
+
+.login-form {
+  background: #fff;
+  padding: 1.5rem;
+  height: 100%;
+  border-radius: 0px 50px 50px 0px;
+  border-left: 10px solid rgb(0 0 0 / 10%);
+}
+
+.welcome-sec {
+  width: 250px;
+  height: 45px;
+  border-radius: 0px 20px 20px 0px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 16px;
+  margin-left: -45px;
+  background: linear-gradient(111.36deg, #94b2d1 6.41%, #88CBEA 105.25%);
+}
+
+.login-logo {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.login-form h5 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #25425F;
+}
+
+.login-form form {
+  padding: 0px 60px;
+  text-align: center;
+}
+
+.login-form form input {
+  border: none;
+  border-bottom: 2.3px solid #25425F;
+  border-radius: 0;
+  color: #25425F;
+}
+
+.login-form form input:focus {
+  box-shadow: none !important;
+}
+
+button.btn-login {
+  background: linear-gradient(111.36deg, #25af6d 6.41%, #25af6d 105.25%);
+  border: none;
+  border-radius: 30px;
+  height: 45px;
+  display: block;
+  margin: 35px auto 20px auto;
+}
+
+h4.otp-text {
+  line-height: 24px;
+  text-align: center;
+  font-size: 16px;
+}
+
+a.btn.btn-forgot-pass {
+  padding: 5px 10px;
+  border-bottom: 2.3px solid #25425F;
+  border-radius: 0;
+}
+
+.login-form form input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #25425F;
+  opacity: 1;
+  /* Firefox */
+}
+
+.login-form form input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #25425F;
+}
+
+.login-form form input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #25425F;
+}
+
+.invalid-feedback {
+  text-align: left;
+}

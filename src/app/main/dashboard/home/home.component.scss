@@ -1,0 +1,110 @@
+.outlet-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    border-radius: 8px;
+    background-color: #F8F9FD;
+    display: grid;
+    // box-shadow: 4px 8px 15px -3px rgb(201 199 199/ 75%);
+    // -webkit-box-shadow: 4px 8px 15px -3px rgb(201 199 199 / 75%);
+    // -moz-box-shadow: 4px 8px 15px -3px rgba(201, 199, 199, 0.75);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 1.5rem;
+
+    align-items: center;
+}
+
+.card-congratulations {
+    background: white;
+    color: #000000;
+    box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+}
+
+.btn1 {
+    background-color: #24c249;
+    color: #fff !important;
+    padding: 5px 29px;
+    box-shadow: 0 4px 8px 0 rgb(126 126 126 / 20%), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.outlet-body h5 {
+    font-size: 20px;
+}
+
+
+.outlet-body h1 {
+    font-size: 24px;
+    color: black;
+}
+
+.order-btn {
+    padding-top: 30px;
+}
+
+.outlet-body h5 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: black;
+}
+
+.parent1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-card {
+    display: grid;
+    place-items: flex-end;
+}
+
+
+h4.font-weight-normal {
+    color: #148AE5;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+p.card-text {
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+section#\ home-page {
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(34, 41, 47, 0.125);
+    margin-bottom: 20px;
+    border-radius: 13px 13px 0px 0px;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+.top-buttons a {
+    margin-right: 9%;
+    padding: 10px 20px;
+    color: black;
+    font-size: 19px;
+    letter-spacing: 1px;
+    // border-bottom: 2px solid green;
+}
+
+.top-buttons span {
+    color: #1b9d65;
+    padding: 5px 0px;
+    border-bottom: 3px solid #1b9d65;
+}
+
+.top-buttons {
+    margin-bottom: 20px;
+}

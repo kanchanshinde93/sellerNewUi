@@ -1,0 +1,359 @@
+h4.font-weight-normal {
+  color: #148AE5;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.shadow-card {
+  position: relative;
+  /* display: flex; */
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  /* background-color: #fff; */
+  background-clip: border-box;
+  border: 1px solid rgba(34, 41, 47, 0.125);
+  border-radius: 0.428rem;
+}
+
+.card-statistics .statistics-body {
+  padding: 0;
+}
+
+.shadow-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #f8f8f8;
+  background-clip: border-box;
+  border: 1px solid rgba(34, 41, 47, 0.125);
+  border-radius: 13px 13px 0px 0px;
+}
+
+.shadow-card {
+  border: none;
+  margin-bottom: 2rem;
+  background-color: #F8F9FD;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out, background 0s, color 0s, border-color 0s;
+  border: 1px solid #E5E6EA;
+}
+
+p.card-text {
+  font-size: 18px;
+  padding-top: 30px;
+}
+
+
+.content-body {
+  padding-top: 34px;
+}
+
+.shadow-card-body.statistics-body1 {
+  background-color: white;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+  border: none;
+}
+
+.btn-parent {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.btn1 {
+  /* border-color: #7367f0 !important; */
+  background-color: #148AE5;
+  color: #fff !important;
+}
+
+.btn2 {
+  /* border-color: #7367f0 !important; */
+  background-color: #0FAB64;
+  color: #fff !important;
+
+}
+
+.shadow-card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.5rem;
+}
+
+.card-body1 {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.5rem;
+}
+
+// 
+.shadow-card.card-outlet-details {
+  padding: 20px;
+}
+
+.detail-card {
+  position: absolute;
+  top: 16px;
+  right: 35px;
+}
+
+
+
+
+// // SMAALL CARD
+// .btn-primary {
+//     /* border-color: #7367f0 !important; */
+//     background-color: #148AE5;
+//     color: #fff !important;
+//     border: none;
+// }
+// .btn-primary:hover {
+//     color: #fff;
+//     background-color: #148AE5;
+//     border-color: none;
+// }
+
+// // butoton
+// a.btn1 {
+//     border-radius: 5px;
+//     background-color: #148AE5;
+//     color: white;
+//     font-size: 16px;
+//     padding: 6px 11px;
+// }
+// a.btn2 {
+//     border-radius: 5px;
+//     background-color: #0FAB64;
+//     color: white;
+//     font-size: 16px;
+//     padding: 6px 11px;
+//     margin-left: 209px;
+// }
+// p.detail-card-text1 {
+//     margin-left: 51px;
+// }
+// .details-btn {
+//     padding-top: 30px;
+// }
+
+
+
+
+// meri
+.order-card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  border-radius: 13px;
+  /* height: 168px; */
+  /* width: 398px; */
+  background-color: #91939b;
+  display: grid;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+  align-items: center;
+}
+
+.order-card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  border-radius: 13px;
+  background-color: #F8F9FD;
+  display: grid;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+  align-items: center;
+}
+
+.card-congratulations {
+  background: white;
+  color: #000000;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+}
+
+p.detail-card-text1 {
+  display: flex;
+  justify-content: end;
+}
+
+
+
+.btn2 {
+  background-color: #EC0A37;
+  color: #fff !important;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 16px;
+  display: flex;
+  padding: 0 45px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.offer-details-btn-btn {
+  // padding-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-offer-card-body h5 {
+  font-size: 20px;
+}
+
+.word {
+  max-width: 127px;
+}
+
+.detail-card {
+  position: absolute;
+  top: 20px;
+}
+
+.outlet-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding-top: 20px;
+}
+
+.offer-card-body h1 {
+  font-size: 24px;
+}
+
+.offer-card-body h1 {
+  font-size: 24px;
+  color: black;
+}
+
+.offer-details-btn-btn {
+  display: flex;
+  // justify-content: space-between;
+  padding-top: 30px;
+}
+
+.order-offer-card-bodyh5 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: black;
+}
+
+.order-offer-card-body h4 {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: black;
+}
+
+// 
+p.Ticket-card-text1 {
+  background-color: #EC0A37;
+  color: white;
+  letter-spacing: 1px;
+  font-family: outfit light;
+  padding: 10px 39px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.offer-details-btn {
+  display: flex;
+  // justify-content: space-between;
+  padding-top: 15px;
+}
+
+.btn1 {
+  background-color: #148AE5;
+  color: #fff !important;
+  padding: 7px 53px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.detail-card {
+  position: absolute;
+  top: 0px;
+}
+
+.offer-details-btn span {
+  color: #000000;
+  font-family: outfit light;
+}
+
+.offer-card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  /*  background-image: url(); */
+  box-shadow: 0 14px 63px 0 rgba(87, 87, 87, 0.2), 0 56px 25px 0 rgba(253, 253, 253, 0.19);
+  padding: 1.5rem;
+  background-color: #fdfafa;
+  background-image: url(../../../../assets/images/myimages/card-bg.png);
+  background-size: cover;
+}
+
+.offer-card-body h5 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-family: outfit medium;
+  color: black;
+}
+
+.card-congratulation-medal {
+  background-size: cover;
+  background-position: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.offer-main-parent {
+  display: flex;
+}
+
+
+
+
+
+/* Add this CSS to your stylesheet or within a <style> tag in your HTML document */
+.abc {
+  background: black;
+  // height: 200px;
+  // width: 50px;
+  position: relative;
+}
+
+.abc span {
+  display: block;
+  transform: rotate(90deg);
+  transform-origin: 100% 100%;
+}
+
+.abc .off {
+  transform: rotate(90deg);
+  transform-origin: 0% 0%;
+}
+
+.abc {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  // height: 200px;
+  // width: 50px;
+}
+
+.rotate-text {
+  transform: rotate(90deg);
+  transform-origin: 100% 100%;
+  color: white;
+  padding: 10px 5px;
+}

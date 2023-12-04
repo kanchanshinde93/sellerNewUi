@@ -1,0 +1,376 @@
+<!-- <div class="ticket">
+    <div class="card card-congratulation-medal">
+        <div class="card-body">
+            <h1>Tickets </h1>
+            <div class="row match-height">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card-body">
+                        <div class="outlet-body">
+                            <div class="parent1">
+                                <div class="area-parent">
+                                    <h5>Apna Sweets</h5>
+                                </div>
+
+                            </div>
+                            <div class="ticket-btn">
+                                <h4>Ticket ID : <span>FBIN0012</span></h4>
+                                <a class="" href="">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card-body">
+                        <div class="outlet1-body">
+                            <div class="product">
+                                <div class="ticket-parent">
+                                    <h5>Product Name</h5>
+                                    <p class="ticket-details-text">Pizza Bati</p>
+                                </div>
+                                <div class="product-ctn">
+                                    <h5>Customer Name</h5>
+                                    <p class="ticket-details-text">Anjali Bhayal</p>
+                                </div>
+                            </div>
+
+                            <div class="product2">
+                                <div class="ticket-parent">
+                                    <h5>Issue</h5>
+                                    <p class="ticket-details-text">Paneer Unfinished</p>
+                                </div>
+                                <div class="product-ctn">
+                                    <h5>Description</h5>
+                                    <p class="ticket-details-text">No Paneer Left in Inventory and also Food
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="ticket">
+    <div class="card card-congratulation-medal">
+        <div class="card-body" *ngIf="showticketfirsttime">
+            <h1>Tickets </h1>
+            <div class="row match-height">
+                <div class="col-12 col-md-6 col-lg-6" *ngFor="let ticket of allTicket">
+                    <div class="card-body">
+                        <div class="outlet-body">
+                            <div class="parent1">
+                                <div class="area-parent">
+                                    <h5>{{ticket.description}}</h5>
+                                </div>
+                                <div class="area-btn">
+                                    <h5>{{ticket.status}}</h5>
+                                </div>
+
+                            </div>
+                            <div class="ticket-btn">
+                                <h4>Ticket ID : <span>{{ticket.ticketId}}</span></h4>
+                                <a class="" (click)="viewDetailsTicket(ticket.ticketId)">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card-body" *ngIf="!showticketfirsttime">
+            <h1>Tickets </h1>
+            <div class="row match-height">
+
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card-body" *ngFor="let ticket of allTicket">
+                        <div class="outlet-body">
+                            <div class="parent1">
+                                <div class="area-parent">
+                                    <h5>{{ticket.description}}</h5>
+                                </div>
+                                <div class="area-btn">
+                                    <h5>{{ticket.status}}</h5>
+                                </div>
+
+                            </div>
+                            <div class="ticket-btn">
+                                <h4>Ticket ID : <span>{{ticket.ticketId}}</span></h4>
+                                <a class="" (click)="viewDetailsTicket(ticket.ticketId)">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card-body">
+                        <div class="outlet1-body">
+                            <div class="product">
+                                <div class="ticket-parent">
+                                    <h5>Product Name</h5>
+                                    <p class="ticket-details-text">
+                                        {{ticketDetails?.orderDetails?.productList[0]?.productName}}</p>
+                                </div>
+                                <div class="product-ctn">
+                                    <h5>Customer Name</h5>
+                                    <p class="ticket-details-text">{{ticketDetails?.orderDetails?.client?.clientName}}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="product2">
+                                <div class="ticket-parent">
+                                    <h5>Issue</h5>
+                                    <p class="ticket-details-text">{{ticketDetails?.issue}}</p>
+                                </div>
+                                <div class="product-ctn">
+                                    <h5>Description</h5>
+                                    <p class="ticket-details-text">{{ticketDetails?.description}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--
+<div class="ticket">
+    <div class="card card-congratulation-medal">
+        <div class="card-body">
+            <h1>Tickets </h1>
+            <div class="row match-height">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card-body">
+                        <div class="outlet-body">
+                            <div class="parent1">
+                                <div class="area-parent">
+                                    <h5>Apna Sweets</h5>
+                                </div>
+
+                            </div>
+                            <div class="ticket-btn">
+                                <h4>Ticket ID : <span>FBIN0012</span></h4>
+                                <a class="" href="">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card-body">
+                        <div class="outlet1-body">
+                            <div class="product">
+                                <div class="ticket-parent">
+                                    <h5>Product Name</h5>
+                                    <p class="ticket-details-text">Pizza Bati</p>
+                                </div>
+                                <div class="product-ctn">
+                                    <h5>Customer Name</h5>
+                                    <p class="ticket-details-text">Anjali Bhayal</p>
+                                </div>
+                            </div>
+
+                            <div class="product2">
+                                <div class="ticket-parent">
+                                    <h5>Issue</h5>
+                                    <p class="ticket-details-text">Paneer Unfinished</p>
+                                </div>
+                                <div class="product-ctn">
+                                    <h5>Description</h5>
+                                    <p class="ticket-details-text">No Paneer Left in Inventory and also Food
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #productView let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel6">Ticket Details</h5>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body" tabindex="0" ngbAutofocus>
+        <div class="row">
+
+            <div class="col-md-12">
+                <h3></h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="product-view-box">
+                            <div><strong>Product Name</strong></div>
+                            <div>
+                                <p>{{ticketDetails?.productNameList}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="product-view-box">
+                            <div><strong>Customer Name</strong></div>
+                            <div>
+                                <p>
+                                    {{ticketDetails?.orderDetails?.client?.clientName}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-view-box">
+                            <div><strong>Issue</strong></div>
+                            <div>
+                                <p>{{ticketDetails?.issue}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="product-view-box">
+                            <div><strong>Description</strong></div>
+                            <div>
+                                <p>
+                                    {{ticketDetails?.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="product-view-box">
+                            <div><strong>status</strong></div>
+                            <div>
+                                <p>
+                                    {{ticketDetails?.status}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<div class="parent d-flex">
+    <div class="col-md-5 p-0" *ngIf="showNewCard1" id="newCardTemplate1">
+        <div class="pl-0 pr-0">
+            <div class="card card-congtrats d-grid align-items-center">
+                <div class="m-1">
+                    <div class="media-custom d-flex justify-content-between">
+                        <div class="ready-btn">
+                            <a href="">Ready</a>
+                        </div>
+                        <div class="order-detail d-flex">
+                            <h5 class="mb-0">Order By : <span>Sahil Singh</span></h5>
+                            <h5 class="mb-0">ID : <span>7ac841</span></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-border"></div>
+                <div class="btn-parent d-flex justify-content-between m-1">
+                    <div class="date mb-0">
+                        <p>17 August | 04:30 PM</p>
+                    </div>
+                    <div class="area">
+                        <a class="mb-0" href="javascript:void(0);" (click)="createNewCard()">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-7 pr-0" *ngIf="showNewCard" id="newCardTemplate ">
+     
+        <div class="pl-0 pr-0">
+            <div class="card card-view d-grid align-items-center">
+                <div class="m-1">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="media-custom d-flex justify-content-between col-md-7">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="ready-btn ml-0 pl-0 pt-1">
+                                            <h5>Order Timeline</h5>
+                                        </div>
+                                        <img class="pl-0" src="assets/images/icons/image (5).png" alt="" />
+                                        <div class="par d-flex pt-5 pl-0 pr-0">
+                                            <div class="col-sm-2 p-0 m-0 d-grid">
+                                                <h6>Pending</h6>
+                                                <p style="font-size: 15px; font-weight: 500">10:30 am</p>
+                                            </div>
+                                            <div class="col-sm-2 m-0 p-0 d-grid">
+                                                <h6>Prepairing</h6>
+                                                <p style="font-size: 15px; font-weight: 500">10:30 am</p>
+                                            </div>
+                                            <div class="col-sm-2 m-0 p-0 d-grid">
+                                                <h6>Ready</h6>
+                                                <p style="font-size: 15px; font-weight: 500">10:30 am</p>
+                                            </div>
+                                            <div class="col-sm-2 m-0 p-0 d-grid">
+                                                <h6>Dispatched</h6>
+                                                <p style="font-size: 15px; font-weight: 500">22:30 pm</p>
+                                            </div>
+                                            <div class="col-sm-2 m-0 p-0 d-grid">
+                                                <h6>Delivered</h6>
+                                                <p style="font-size: 15px; font-weight: 500">22:30 pm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 pt-1">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="food d-flex justify-content-between">
+                                            <p>Margherita Pizza X 2</p>
+                                            <p>Rs. 1080</p>
+                                        </div>
+                                        <div class="food d-flex justify-content-between">
+                                            <p>Margherita Pizza X 2</p>
+                                            <p>Rs. 1080</p>
+                                        </div>
+                                        <div class="food d-flex justify-content-between pt-1">
+                                            <p style="color: #76a05b; font-size: 15px; font-weight: 500">Taxes</p>
+                                            <p>Rs. 1080</p>
+                                        </div>
+                                        <div class="food d-flex justify-content-between">
+                                            <p style="color: #76a05b; font-size: 15px; font-weight: 500">Discount</p>
+                                            <p>Rs. 1080</p>
+                                        </div>
+                                        <div class="food d-flex justify-content-between">
+                                            <p style="color: #76a05b; font-size: 15px; font-weight: 500">Total Bill
+                                                <span
+                                                    style="background-color: #ffd3d3; padding: 2px 8px; color: red; font-size: 13px; font-weight: 500">Not
+                                                    Collected</span>
+                                            </p>
+                                            <p>Rs. 1080</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

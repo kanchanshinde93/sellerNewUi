@@ -1,0 +1,9 @@
+/* styles.scss or styles.css */
+@font-face {
+    font-family: 'Outfit-Regular';
+    src: url('../outfit/Outfit-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Outfit-Regular';
+}
