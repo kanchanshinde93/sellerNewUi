@@ -29,7 +29,7 @@ export const menu: CoreMenu[] = [
     title: "Ticket",
     translate: "MENU.TICKET",
     type: "item",
-    icon:"../../assets/images/navbaricon/Group 40275.png/",
+    icon:"../../assets/images/myimages/Group 40292.png",
     url: "dashboard/ticket",
   },
   {
@@ -37,7 +37,7 @@ export const menu: CoreMenu[] = [
     title: "Promotion",
     translate: "MENU.PROMOTION",
     type: "item",
-    icon:"../../assets/images/navbaricon/Group 40276.png/",
+    icon:"../../assets/images/myimages/Group 40292.png",
     url: "dashboard/promotion",
   },
   {
