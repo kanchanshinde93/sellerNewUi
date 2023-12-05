@@ -20,6 +20,7 @@ import { MenuComponent } from "./menu/menu.component";
 import { NewmenuComponent } from "./newmenu/newmenu.component";
 import { BlockUIComponent, BlockUIModule } from "ng-block-ui";
 import { AccountComponent } from './account/account.component';
+import { CoreCommonModule } from '@core/common.module';
 
 const routes: Routes = [
   {
@@ -103,6 +104,7 @@ const routes: Routes = [
     FormsModule,
     NgbModule,
     Ng2FlatpickrModule,
+    CoreCommonModule,
     NgxDatatableModule,
     BlockUIModule.forRoot(),
     RouterModule.forChild(routes),
