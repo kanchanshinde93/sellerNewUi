@@ -21,7 +21,7 @@ export const menu: CoreMenu[] = [
     title: "AllOutlet",
     translate: "MENU.ALLOUTLET",
     type: "item",
-    icon:"../../assets/images/myimages/Group 40294.png",
+    icon:"../../assets/images/myimages/Group 40305.svg",
     url: "dashboard/allOutlet",
   },
   {
@@ -29,7 +29,7 @@ export const menu: CoreMenu[] = [
     title: "Ticket",
     translate: "MENU.TICKET",
     type: "item",
-    icon:"../../assets/images/myimages/Group 40292.png",
+    icon:"../../assets/images/myimages/Group 40309.svg",
     url: "dashboard/ticket",
   },
   {
@@ -37,7 +37,7 @@ export const menu: CoreMenu[] = [
     title: "Promotion",
     translate: "MENU.PROMOTION",
     type: "item",
-    icon:"../../assets/images/myimages/Group 40292.png",
+    icon:"../../assets/images/myimages/Group 40307.svg",
     url: "dashboard/promotion",
   },
   {
@@ -45,7 +45,7 @@ export const menu: CoreMenu[] = [
     title: "Account",
     translate: "MENU.ACCOUNT",
     type: "item",
-    icon:"../../assets/images/myimages/Group 40291.png/",
+    icon:"../../assets/images/myimages/Group 40306.svg",
     url: "dashboard/account",
   },
   // {
