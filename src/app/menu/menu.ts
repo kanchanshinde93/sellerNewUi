@@ -6,7 +6,7 @@ export const menu: CoreMenu[] = [
     title: "Orders",
     translate: "MENU.ORDERS",
     type: "item",
-    icon:"../../assets/images/myimages/Group 40292.png",
+    icon:"../../assets/images/myimages/Group 40311.svg",
     url: "dashboard/orders",
   },
  /*  {
