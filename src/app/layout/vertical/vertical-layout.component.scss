@@ -1,2 +1,9 @@
 @import '@core/scss/base/core/menu/menu-types/vertical-menu.scss';
 @import '@core/scss/base/core/menu/menu-types/vertical-overlay-menu.scss';
+
+.vertical-layout.vertical-menu-modern.menu-collapsed .main-menu:not(.expanded) .navigation li.active a {
+    background: #1a9062;
+    box-shadow: none;
+    color: #565656;
+    // padding: 10px 10px;
+}
