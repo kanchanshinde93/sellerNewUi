@@ -149,6 +149,8 @@ export class TicketComponent implements OnInit {
   }
   viewDetailsTicket(ticketid:any){
     console.log( this.showticketfirsttime)
+    console.log(ticketid);
+    
     this.showticketfirsttime=false;
     this.allTicketList()
     this.AuthService.ViewTicketDetails(ticketid).subscribe((data: any) => {
