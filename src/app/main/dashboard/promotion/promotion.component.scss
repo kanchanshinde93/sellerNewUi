@@ -194,9 +194,9 @@ p.detail-card-text1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.offer-details-btn-btn {
-  // padding-top: 35px;
+.offer-details-btn {
   display: flex;
+  padding-top: 15px;
   justify-content: space-between;
 }
 
@@ -261,7 +261,7 @@ p.Ticket-card-text1 {
 .offer-details-btn {
   display: flex;
   // justify-content: space-between;
-  padding-top: 15px;
+  padding-top: 35px;
 }
 
 .btn1 {
@@ -324,29 +324,29 @@ img {
 
 
 /* Add this CSS to your stylesheet or within a <style> tag in your HTML document */
-.abc {
-  background: black;
-  // height: 200px;
-  // width: 50px;
-  position: relative;
-}
+// .abc {
+//   background: black;
+//   // height: 200px;
+//   // width: 50px;
+//   position: relative;
+// }
 
-.abc span {
-  display: block;
-  transform: rotate(90deg);
-  transform-origin: 100% 100%;
-}
+// .abc span {
+//   display: block;
+//   transform: rotate(90deg);
+//   transform-origin: 100% 100%;
+// }
 
-.abc .off {
-  transform: rotate(90deg);
-  transform-origin: 0% 0%;
-}
+// .abc .off {
+//   transform: rotate(90deg);
+//   transform-origin: 0% 0%;
+// }
 
 .abc {
   position: absolute;
   top: 0;
   right: 0;
-  background: black;
+  // background: black;
   // height: 200px;
   // width: 50px;
 }
@@ -359,4 +359,16 @@ img {
 }
 .order {
   padding-top: 25px;
+}
+
+.promotion img {
+  right: 0;
+  top: 24px;
+  height: 35%;
+}
+.abc{
+  position: absolute;
+  top: 39px;
+  right: 36px;
+  color: #fefefe;
 }
