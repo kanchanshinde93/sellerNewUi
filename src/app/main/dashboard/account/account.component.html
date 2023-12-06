@@ -39,7 +39,7 @@
                                       <!-- <small>Starbucks</small> -->
                                     </div>
                                   </div>
-                                  <div class="details">kanchan shinde</div>
+                                  <div class="details">{{ sellerData?.basicDetails?.sellerName }}</div>
                                 </div>
                                 <div class="transaction-item">
                                   <div class="media">
@@ -53,7 +53,7 @@
                                       
                                     </div>
                                   </div>
-                                  <div class="details">shinde's kitchen</div>
+                                  <div class="details">{{ sellerData?.basicDetails?.tradeName }}</div>
                                 </div>
                                 <div class="transaction-item">
                                   <div class="media">
@@ -67,7 +67,7 @@
                                      
                                     </div>
                                   </div>
-                                  <div class="details">enterprise</div>
+                                  <div class="details">{{ sellerData?.basicDetails?.sellerType }}</div>
                                 </div>
                                 <div class="transaction-item">
                                   <div class="media">
@@ -81,7 +81,7 @@
                                      
                                     </div>
                                   </div>
-                                  <div class="details">DEMOGST3445</div>
+                                  <div class="details">{{ sellerData?.basicDetails?.gstNo }}</div>
                                 </div>
                                 <div class="transaction-item">
                                   <div class="media">
@@ -95,7 +95,7 @@
                                      
                                     </div>
                                   </div>
-                                  <div class="details">JEFTCA7852</div>
+                                  <div class="details">{{ sellerData?.basicDetails?.panNumber }}</div>
                                 </div>
                                 <div class="transaction-item">
                                   <div class="media">
@@ -109,7 +109,7 @@
                                       
                                     </div>
                                   </div>
-                                  <div class="details">9862959668</div>
+                                  <div class="details">{{ sellerData?.basicDetails?.phone }}</div>
                                 </div>
                                 <div class="transaction-item">
                                   <div class="media">
@@ -123,7 +123,7 @@
                                       
                                     </div>
                                   </div>
-                                  <div class="details">9862959668</div>
+                                  <div class="details">{{sellerData?.verificationStatus}}</div>
                                 </div>
                                 <div class="transaction-item">
                                   <div class="media">
@@ -137,7 +137,7 @@
                                       
                                     </div>
                                   </div>
-                                  <div class="details">9862959668</div>
+                                  <div class="details">{{sellerData?.numberOfShop}}</div>
                                 </div>
                               </div>
                             </div>
@@ -170,7 +170,7 @@
                               
                               </div>
                             </div>
-                            <div class="details">- $74</div>
+                            <div class="details">{{ sellerData?.licenseDetails?.nameOnlicence }}</div>
                           </div>
                           <div class="transaction-item">
                             <div class="media">
@@ -184,7 +184,7 @@
                               
                               </div>
                             </div>
-                            <div class="details">+ $480</div>
+                            <div class="details">{{ sellerData?.licenseDetails?.licenceNumber }}</div>
                           </div>
                           <div class="transaction-item">
                             <div class="media">
@@ -198,7 +198,7 @@
                                 
                               </div>
                             </div>
-                            <div class="details">+ $590</div>
+                            <div class="details">{{ sellerData?.licenseDetails?.issuedOn }}</div>
                           </div>
                           <div class="transaction-item">
                             <div class="media">
@@ -212,7 +212,7 @@
                                
                               </div>
                             </div>
-                            <div class="details">- $23</div>
+                            <div class="details">{{ sellerData?.licenseDetails?.tenure }}</div>
                           </div>
                        
                         </div>
@@ -247,7 +247,7 @@
                                   
                                 </div>
                               </div>
-                              <div class="details">- $74</div>
+                              <div class="details">{{ sellerData?.authorizedPersonDetails?.name }}</div>
                             </div>
                             <div class="transaction-item">
                               <div class="media">
@@ -260,7 +260,7 @@
                                   <h6 class="transaction-title">Pan No:</h6>
                                 </div>
                               </div>
-                              <div class="details">+ $480</div>
+                              <div class="details">{{ sellerData?.authorizedPersonDetails?.pan }}</div>
                             </div>
                             <div class="transaction-item">
                               <div class="media">
@@ -274,7 +274,7 @@
                                  
                                 </div>
                               </div>
-                              <div class="details">+ $590</div>
+                              <div class="details">{{ sellerData?.authorizedPersonDetails?.phone }}</div>
                             </div>
                             <div class="transaction-item">
                               <div class="media">
@@ -288,7 +288,7 @@
                                  
                                 </div>
                               </div>
-                              <div class="details">- $23</div>
+                              <div class="details">{{ sellerData?.authorizedPersonDetails?.email }}</div>
                             </div>
                            
                           </div>
