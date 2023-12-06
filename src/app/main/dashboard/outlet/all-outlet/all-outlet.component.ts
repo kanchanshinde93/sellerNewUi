@@ -8,6 +8,7 @@ import { ToastrserviceService } from "app/services/toastrservice.service";
 import * as FileSaver from "file-saver";
 import * as XLSX from "xlsx";
 import { BlockUI, NgBlockUI } from "ng-block-ui";
+
 @Component({
   selector: "app-all-outlet",
   templateUrl: "./all-outlet.component.html",
@@ -15,6 +16,7 @@ import { BlockUI, NgBlockUI } from "ng-block-ui";
 })
 
 export class AllOutletComponent implements OnInit {
+
   @BlockUI() blockUI: NgBlockUI;
   @ViewChild(DatatableComponent) table: DatatableComponent | any;
   @ViewChild("tableRowDetails") tableRowDetails: any;

@@ -22,6 +22,8 @@ import { BlockUIComponent, BlockUIModule } from "ng-block-ui";
 import { AccountComponent } from './account/account.component';
 import { CoreCommonModule } from '@core/common.module';
 
+
+
 const routes: Routes = [
   {
     path: "",
@@ -99,6 +101,7 @@ const routes: Routes = [
   ],
   imports: [
     FileUploadModule,
+    
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
@@ -108,6 +111,8 @@ const routes: Routes = [
     NgxDatatableModule,
     BlockUIModule.forRoot(),
     RouterModule.forChild(routes),
+    
   ],
 })
+
 export class DashboardModule { }
