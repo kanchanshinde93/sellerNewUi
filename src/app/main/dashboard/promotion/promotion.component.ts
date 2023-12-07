@@ -148,6 +148,7 @@ export class PromotionComponent implements OnInit {
     this.modalService.open(modalData, {
       centered: true,
       size: "md",
+  
     });
   }
 
@@ -164,4 +165,11 @@ export class PromotionComponent implements OnInit {
         this.modalService.dismissAll();
       });
   }
+  modalOpen(modalBasic) {
+    this.modalService.open(modalBasic, {
+      windowClass: "modal",
+    });
+  }
+
+  
 }

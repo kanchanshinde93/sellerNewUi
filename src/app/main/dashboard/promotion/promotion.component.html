@@ -90,7 +90,10 @@
 <div class="order">
   <div class="card card-congratulation-medal">
     <div class="card-body">
+    <div class="parent d-flex justify-content-between">
       <h1>Promotion</h1>
+      <button class="Add-btn">Add Offer + </button>
+    </div>
       <div class="outlet-row match-height">
         <!-- Congratulations Card -->
         <div class="col-12 col-md-6 col-lg-4" *ngFor="let promo of promotionList">
@@ -98,8 +101,14 @@
             <div class="offer-card-body">
               <h5 class="word"> {{promo.discountTitle || promo.promoCode}}</h5>
               <div class="offer-details-btn">
-                <a class="btn1" href="">EDIT</a>
-                <a class="btn2" href="">Delete</a>
+                <!-- <a class="btn1" href="">EDIT</a> -->
+                <button type="button" (click)="modalOpen(modalBasic)" class="btn1" rippleEffect>
+                  EDIT
+                </button>
+                <!-- <a class="btn2" href="">Delete</a> -->
+                <button type="button" (click)="modalOpen(modalDelete)" class="btn2" rippleEffect>
+                  Delete
+                </button>
               </div>
               <div class="promotion">
                 <img src="assets/images/myimages/Path 87065.svg" class="congratulation-medal" alt="Medal Pic" /> 
@@ -116,10 +125,10 @@
     </div>
   </div>
 </div>
-<!-- Modal add offer-->
-<ng-template #content let-modal>
+<!-- Modal Add offer-->
+<ng-template #modalBasic let-modal>
   <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalCenterTitle">Add Offers</h5>
+    <h5 class="modal-title" id="exampleModalCenterTitle">Edit Offers</h5>
     <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -225,27 +234,130 @@
 <!-- / Modal add offer -->
 
 <!-- Modal delete offer-->
-<ng-template #modalDelete let-modal>
-  <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalCenterTitle">Delete Offers</h5>
-    <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body" tabindex="0" ngbAutofocus>
+<ng-template #modalDelete let-modal>  
+  <div class="modal-body p-2" tabindex="0" ngbAutofocus>
     <p>Are you sure you want to Delete ?</p>
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="modal.close('Accept click')" rippleEffect>
+  <div class="modal-footer p-2">
+    <button type="button" class="model-btn" (click)="modal.close('Accept click')" rippleEffect>
       Cancel
     </button>
-    <button type="button" class="btn btn-primary" (click)="deletePromotion()" rippleEffect>
+    <button type="button" class="model-btn1" (click)="deletePromotion()" rippleEffect>
       Delete
     </button>
   </div>
+
+
 </ng-template>
 <!-- / Modal delete offer -->
 
 <!-- Modal add promo-->
 
 <!-- / Modal delete promo -->
+
+<!-- modal add offer -->
+<ng-template #modalBasic let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalCenterTitle">Add Offers</h5>
+    <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" tabindex="0" ngbAutofocus>
+    <form [formGroup]="addDiscountForm" class="form form-vertical" (ngSubmit)="addDiscountFormSubmit()">
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="first-name-vertical">Discount Name</label>
+            <input type="text" id="discountTitle-vertical" class="form-control" name="discountTitle"
+              placeholder="Discount Name" formControlName="discountTitle" [ngClass]="{
+                'is-invalid': submitted && addDiscount.discountTitle.errors
+              }" />
+            <div *ngIf="submitted && addDiscount.discountTitle.errors" class="invalid-feedback">
+              <div *ngIf="addDiscount.discountTitle.errors.required">
+                Discount Name is required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group">
+            <label for="first-name-vertical">Promo Code</label>
+            <input type="text" id="promoCode-vertical" class="form-control" name="promoCode" placeholder="Promo Code"
+              formControlName="promoCode" />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group">
+            <label for="email-id-vertical">Percent Off(%)</label>
+
+            <select class="form-control" formControlName="discountPercent" id="basicSelect" [ngClass]="{
+                'is-invalid': submitted && addDiscount.discountPercent.errors
+              }">
+              <option>10</option>
+              <option>15</option>
+              <option>20</option>
+              <option>25</option>
+              <option>30</option>
+              <option>40</option>
+              <option>45</option>
+              <option>50</option>
+              <option>60</option>
+              <option>70</option>
+              <option>80</option>
+            </select>
+            <div *ngIf="submitted && addDiscount.discountPercent.errors" class="invalid-feedback">
+              <div *ngIf="addDiscount.discountPercent.errors.required">
+                Discount Percent is required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 form-group" class="">
+          <label for="basicTextarea">Minimum order value</label>
+          <input type="number" id="discountPercent-vertical" class="form-control" name="minAmount"
+            placeholder="Min Amount" formControlName="minAmount" [ngClass]="{
+              'is-invalid': submitted && addDiscount.minAmount.errors
+            }" />
+          <div *ngIf="submitted && addDiscount.minAmount.errors" class="invalid-feedback">
+            <div *ngIf="addDiscount.minAmount.errors.required">
+              Minmum Amount is required
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-1 mb-1 form-group">
+          <input class="form-check-input" type="checkbox" id="flexCheckDefault" (change)="flatValue($event)" />
+          <label class="form-check-label">
+            <span class="gray-clr">Flat Discount</span>
+          </label>
+          <label class="cyberpunk-checkbox-label">
+            <input type="checkbox" (change)="flatValue($event)" class="cyberpunk-checkbox"
+              formControlName="isFlatDiscount" />
+            Flat Discount</label>
+        </div>
+
+        <div class="col-12 form-group" *ngIf="!isFlat">
+          <label for="basicTextarea">maxDiscount</label>
+          <input type="number" id="maxDiscount-vertical" class="form-control" name="maxDiscount"
+            placeholder="Max Discount" formControlName="maxDiscount" [ngClass]="{
+              'is-invalid': submitted && addDiscount.maxDiscount.errors
+            }" />
+          <div *ngIf="submitted && addDiscount.maxDiscount.errors" class="invalid-feedback">
+            <div *ngIf="addDiscount.maxDiscount.errors.required">
+              Maximum Discount Amount is required
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="modal.close('Accept click')" rippleEffect>
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary" rippleEffect>
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>  
