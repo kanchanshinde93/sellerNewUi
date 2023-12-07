@@ -17,7 +17,7 @@ import { coreConfig } from "app/app-config";
 
 import { AppComponent } from "app/app.component";
 import { LayoutModule } from "app/layout/layout.module";
-import { SampleModule } from "app/main/sample/sample.module";
+
 import { NgxDatatableModule } from "@swimlane/ngx-datatable";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { NewmenuComponent } from "./main/dashboard/newmenu/newmenu.component";
@@ -78,7 +78,6 @@ const appRoutes: Routes = [
 
     // App modules
     LayoutModule,
-    SampleModule,
     NgxDatatableModule,
     ToastrModule,
   ],
