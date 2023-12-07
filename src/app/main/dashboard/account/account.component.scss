@@ -65,3 +65,14 @@ span.user-name.font-weight-light {
 .ticket{
     padding-top: 25px;
 }
+
+.avatar.img{
+    height: 100px;
+    width: 100px;
+    background-color: #a3e9b3;
+    color: #f8f9fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
