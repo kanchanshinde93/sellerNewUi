@@ -8,10 +8,12 @@
                       <div class="outlet-body">
                          <div class="account-parent d-flex align-items-center">
                             <div class="avatar img">
-                              <img class="round" src="../../../../assets/images/myimages/image (25).png">
+                              <!-- <img class="round" src="../../../../assets/images/myimages/image (25).png"> -->
+                              {{sellerData?.basicDetails?.tradeName.charAt(0).toUpperCase()}}
                             </div>
+                            
                             <div class="avatar-parent">
-                              <span class="user-name font-weight-light">Apna Sweets</span>
+                              <span class="user-name font-weight-light">{{ sellerData?.basicDetails?.tradeName }}</span>
                               <p>Vijay Nagar</p>
                             </div>
                          </div> 
@@ -302,3 +304,4 @@
       </div>
   </div>
 </div>
+<block-ui> </block-ui>
