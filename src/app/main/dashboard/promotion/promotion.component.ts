@@ -168,6 +168,7 @@ export class PromotionComponent implements OnInit {
   modalOpen(modalBasic) {
     this.modalService.open(modalBasic, {
       windowClass: "modal",
+      centered:true
     });
   }
 
