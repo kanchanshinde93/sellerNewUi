@@ -323,7 +323,7 @@ export class AllOutletComponent implements OnInit {
         this.allOutlet()
       });
   }
-  viewdetails() {
-    this.router.navigate(["/dashboard/outletDetails"]);
+  viewdetails(outletDetails:any) {
+    this.router.navigate(["/outletDetails"],{ state: { outletDetails } });
   }
 }
