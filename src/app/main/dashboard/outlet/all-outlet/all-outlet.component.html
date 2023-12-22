@@ -17,16 +17,14 @@
                   <p class="detail-card-text">{{outletdata.phone}}</p>
                 </div>
               </div>
-
               <div class="details-btn">
-                <button class="btn1" href="">View Details</button>
+                <button class="btn1"  (click)="viewdetails(outletdata)">View Details</button>
+                <!-- routerLink="/dashboard/outletDetails" -->
                 <button [ngClass]="{'btn3': outletdata.isClosed, 'btn2': !outletdata.isClosed}"
                   (click)="statusChange($event, content, outletdata)">{{
                   outletdata.isClosed
                   ? 'Close' : 'Open' }}</button>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -310,10 +308,8 @@
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" (click)="onCuisineSelect(cuisine)"
               [checked]="cuisineCheck(cuisine.cuisineId)" />
-            <label class="form-check-label" for="inlineCheckbox2">{{
-              cuisine.cuisineName
-              }}</label>
-          </div>
+            <label class="form-check-label" for="inlineCheckbox2">{{cuisine.cuisineName}}</label>
+          </div>  
         </div>
       </div>
     </div>
@@ -326,6 +322,3 @@
 </ng-template>
 
 <block-ui> </block-ui>
-
-
-
