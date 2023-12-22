@@ -212,11 +212,11 @@ export class AllOutletComponent implements OnInit {
   }
 
   // redirected to outlet details
-  showOutletDetail(outletDetails: any) {
-    this.router.navigate(["/dashboard/outletDetails"], {
-      state: { outletDetails },
-    });
-  }
+  // showOutletDetail(outletDetails: any) {
+  //   this.router.navigate(["/dashboard/outletDetails"], {
+  //     state: { outletDetails },
+  //   });
+  // }
 
 
 
@@ -304,9 +304,6 @@ export class AllOutletComponent implements OnInit {
   }
 
 
-
-
-
   openAddOutletModal(data: any) {
     this.modalService.open(data, {
       centered: true,
@@ -325,5 +322,8 @@ export class AllOutletComponent implements OnInit {
         this.toastr.showSuccess(res.message, "Succes")
         this.allOutlet()
       });
+  }
+  viewdetails() {
+    this.router.navigate(["/dashboard/outletDetails"]);
   }
 }

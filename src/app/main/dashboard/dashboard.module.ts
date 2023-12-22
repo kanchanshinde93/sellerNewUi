@@ -98,6 +98,7 @@ const routes: Routes = [
     MenuComponent,
     NewmenuComponent,
     AccountComponent,
+    
   ],
   imports: [
     FileUploadModule,

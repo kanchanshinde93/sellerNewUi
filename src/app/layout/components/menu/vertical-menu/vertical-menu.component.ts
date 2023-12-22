@@ -141,4 +141,6 @@ export class VerticalMenuComponent implements OnInit, OnDestroy {
       this._coreConfigService.setConfig({ layout: { menu: { collapsed: true } } }, { emitEvent: true });
     }
   }
+ 
+
 }

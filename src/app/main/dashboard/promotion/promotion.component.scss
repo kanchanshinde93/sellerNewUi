@@ -423,3 +423,25 @@ button.model-btn1 {
   /* max-width: 170px; */
   font-size: 20px;
 }
+.offer-details-btn {
+  display: flex;
+  padding-top: 100px;
+}
+
+.outlet-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.offer-medal {
+  width: 100%;
+  display: flex;
+}
+
+.offer-card-body {
+  display: flex;
+  flex-direction: column;
+  // height: 100%; /* Isse card apne parent ki height ke barabar hogi */
+  border: 1px solid #ccc; /* Design ke mutabiq border add karein */
+  margin: 10px; /* Design ke hisaab se margin set karein */
+}
