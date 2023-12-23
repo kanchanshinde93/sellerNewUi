@@ -1,90 +1,30 @@
-::ng-deep .product-detail-modal {
-  max-width: 100%;
-  margin: 0;
+.image img {
+  height: 100%;
+  width: 200px;
+  border-radius: 5%;
 }
-::ng-deep .product-detail-modal .modal-dialog {
-  max-width: 100%;
-  margin: 0;
+.card.card1-profile .card-body1 {
+  padding: 15px 12px;
+  border: none;
 }
-@media only screen and (min-width: 576px) {
-  ::ng-deep .product-detail-modal .modal-dialog {
-    max-width: 100%;
-    margin: 0;
-  }
-}
-
-.media {
-  gap: 14px;
-}
-/* sncbshbfhfd */
-
-//   view more button
-.area a {
-  background-color: #c7c7ff;
-  color: #4040ff;
-  padding: 3px 43px;
-  border-radius: 6px;
-}
-
-/////
-/// view more card
-.ready-btn a {
-  color: #ffb529;
-  background-color: #ffeecd;
-  padding: 3px 30px;
-  border-radius: 6px;
-}
-.order-detail h5 {
-  color: #7a7a7a;
-  font-size: 17px;
-}
-.order-detail span {
-  color: #6c825b;
-  font-size: 17px;
-}
-.order-detail {
-  gap: 40px;
-}
-//   view more card
-// a.ml-5:focus {
-//   color: #a1a59e;
-//   background-color: #d0dec7;
-//   font-weight: 400;
-//   color: #2a6b00;
-//   text-decoration: none;
-//   padding: 6px 14px;
-//   border-radius: 5px;
-// }
-
-a[href] {
-  color: inherit;
-  text-decoration: none;
-}
-
-.nav-active {
-    color: #a1a59e;
-    background-color: #d0dec7;
-    font-weight: 400;
-    color: #2a6b00;
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 5px;
-  }
-
-.order-border {
-  border: 1px dashed grey;
-}
-.card.card-congtrats.d-grid.align-items-center {
-  height: 231px;
-}
-
-// banner image
-.banner-image-container {
-  overflow: hidden; /* Hide any overflowing content */
-}
-
-.banner-image {
-  aspect-ratio: 16/2;
-  object-fit: cover;
+.card-transaction {
+  padding-top: 20px;
   width: 100%;
+}
+.card-body11 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 20px;
+  height: 100%;
+}
+.outlet-name-details {
+  margin-top: 10px;
+}
+.badge.badge-light-primary {
+  background-color: rgb(62 136 235);
+  color: #ffffff !important;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+.column-parent {
+  margin-bottom: 25px;
 }

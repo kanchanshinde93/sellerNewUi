@@ -1,721 +1,144 @@
 <div class="content-wrapper container-fluid p-0">
   <div class="content-body">
-    <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header> -->
-
     <section id="outlet-details-page">
-      <!-- <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Outlet Details</h4>
-          <div class="outlet-btn-sec">
-            <button class="btn btn-primary btn-add" routerLink="/outlet-info/add-outlet"><span>Add New Outlet</span> </button>
-            <button
-              class="btn btn-primary btn-add"
-              (click)="openOfferModal(content)"
-            >
-              <span>Offers</span>
-            </button>
-            <button
-              class="btn btn-primary btn-add"
-              (click)="orderHistoryPage()"
-            >
-              <span>Order History</span>
-            </button>
-            <button class="btn btn-primary btn-add" (click)="gotoMenuPage()">
-              <span>Menu</span>
-            </button>
-            <button
-              class="btn btn-primary btn-add"
-              (click)="openOutofStockModal(content3)"
-            >
-              <span>Out of Stock</span>
-            </button>
-            <button
-              class="btn btn-primary btn-add"
-              (click)="openEarningModal(content5)"
-            >
-              <span>Earning</span>
-            </button>
-          </div>
-        </div>
-        <div class="nav-vertical">
-          <ul
-            ngbNav
-            #navVertical="ngbNav"
-            class="nav nav-tabs nav-left flex-column"
-          >
-            <li ngbNavItem>
-              <a ngbNavLink>About Outlet</a>
-              <ng-template ngbNavContent>
-                <div class="card card-profile">
-                  <img
-                    src="{{ outletData?.outletImage }}"
-                    class="img-fluid card-img-top"
-                    alt="Profile Cover Photo"
-                  />
-                  <div class="card-body">
-                    <div class="profile-image-wrapper">
-                      <div class="profile-image">
-                        <div class="avatar">
-                          <img
-                            src="{{ outletData?.outletImage }}"
-                            alt="Profile Picture"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <h3>{{ outletData?.outletName }}</h3>
-                    <h6 class="text-muted">{{ outletData?.shopAddress }}</h6>
-                    <div class="badge badge-light-primary profile-badge">
-                      {{ outletData?.area }}
-                    </div>
-                    <hr class="mb-2" />
-                    <div class="details-section">
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <h4 class="text-secondary font-weight-bolder">
-                            Basic Details
-                          </h4>
-
-                          <div class="row">
-                            <div class="col-lg-5"><p><strong>Merchant Name:</strong></p></div>
-                                                    <div class="col-lg-7"><p>Aruna Lonkar</p></div>
-                            <div class="col-lg-5">
-                              <p><strong>Trade Name:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>{{ outletData?.outletName }}</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Is Verified:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>{{ outletData?.isVerified }}</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <h4 class="text-secondary font-weight-bolder">
-                            Outlet Timing
-                          </h4>
-
-                          <div class="row">
-                            <div class="col-lg-5">
-                              <p><strong> Opening Time :</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>{{ openingTime }}</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Closing Time:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>{{ closingTime }}</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <h4 class="text-secondary font-weight-bolder">
-                            Contact Details
-                          </h4>
-
-                          <div class="row">
-                            <div class="col-lg-5">
-                              <p><strong>Phone:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>{{ outletData?.phone }}</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Is Closed:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>{{ outletData?.isClosed }}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ng-template>
-            </li>
-            <li ngbNavItem>
-              <a ngbNavLink>Lincence Details</a>
-              <ng-template ngbNavContent>
-                <div class="card card-profile">
-                  <img
-                    src="assets/images/pages/merchant/outlet-image.png"
-                    class="img-fluid card-img-top"
-                    alt="Profile Cover Photo"
-                  />
-                  <div class="card-body">
-                    <div class="profile-image-wrapper">
-                      <div class="profile-image">
-                        <div class="avatar">
-                          <img
-                            src="assets/images/pages/merchant/outlet-profile.jpg"
-                            alt="Profile Picture"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <h3>Kadhai Spices Restaurent</h3>
-                    <h6 class="text-muted">
-                      15-B, Rajat Jayanti Complex, Scheme no 54, Vijay Nagar,
-                      Indore
-                    </h6>
-                    <div class="badge badge-light-primary profile-badge">
-                      Vijay Nagar
-                    </div>
-                    <hr class="mb-2" />
-                    <div class="details-section">
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <h4 class="text-secondary font-weight-bolder">License Details</h4>
-
-                          <div class="row">
-                            <div class="col-lg-5">
-                              <p><strong>Name On Licence:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>Kadhai Spices Restaurant</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Licence Number:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>21421850000758</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <h4 class="text-secondary font-weight-bolder">
-                            Issued Date & Tenure
-                          </h4>
-
-                          <div class="row">
-                            <div class="col-lg-5">
-                              <p><strong>Issued On:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>21/01/2021</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Tenure:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>5 Years</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ng-template>
-            </li>
-            <li ngbNavItem>
-              <a ngbNavLink>Authorized Person Detail </a>
-              <ng-template ngbNavContent>
-                <div class="card card-profile">
-                  <img
-                    src="assets/images/pages/merchant/outlet-image.png"
-                    class="img-fluid card-img-top"
-                    alt="Profile Cover Photo"
-                  />
-                  <div class="card-body">
-                    <div class="profile-image-wrapper">
-                      <div class="profile-image">
-                        <div class="avatar">
-                          <img
-                            src="assets/images/pages/merchant/outlet-profile.jpg"
-                            alt="Profile Picture"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <h3>Kadhai Spices Restaurent</h3>
-                    <h6 class="text-muted">
-                      15-B, Rajat Jayanti Complex, Scheme no 54, Vijay Nagar,
-                      Indore
-                    </h6>
-                    <div class="badge badge-light-primary profile-badge">
-                      Vijay Nagar
-                    </div>
-                    <hr class="mb-2" />
-                    <div class="details-section">
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <h4 class="text-secondary font-weight-bolder">
-                            Authorized Person Detail
-                          </h4>
-
-                          <div class="row">
-                            <div class="col-lg-5">
-                              <p><strong>User Id:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>0d8cd62a</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Pan:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>AKMPL8044P</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Phone:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>7470653853</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Email:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>kadhaispices@gmail.com</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <h4 class="text-secondary font-weight-bolder">
-                            Basic Details
-                          </h4>
-
-                          <div class="row">
-                            <div class="col-lg-5">
-                              <p><strong> Name:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>Aruna Lonkar</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong> Seller Id :</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>d9f5ba1f</p>
-                            </div>
-                            <div class="col-lg-5">
-                              <p><strong>Agent Id:</strong></p>
-                            </div>
-                            <div class="col-lg-7">
-                              <p>3774fd08</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ng-template>
-            </li>
-          </ul>
-          <div [ngbNavOutlet]="navVertical"></div>
-        </div>
-      </div> -->
-      <div class="card" style="width: 100%" *ngIf="outletData">
-        <div class="banner-image-container">
-          <img class="banner-image" [src]="outletData?.outletImage" alt="" />
-        </div>
-        <div class="card-body p-2rem 4rem">
-          <div class="container-fluid">
-            <div class="row pt-2 pb-2">
-              <div class="col-sm-4 p-0 m-0">
-                <div class="media d-flex">
-                  <div class="avatar mr-1">
-                    <img [src]="outletData?.outletImage" alt="Avatar" width="42" height="42" />
-                  </div>
-                  <div class="media-body">
-                    <h5 class="mb-0">
-                      <b>{{ outletData.outletName }}</b>
-                    </h5>
-                    <p style="font-size: 13px; padding-top: 7px; color: grey">{{ outletData.shopAddress }}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-2 p-0 m-0 d-grid justify-content-end">
-                <h6><b>Outlet Name</b></h6>
-                <p style="color: #76a05b; font-size: 15px; font-weight: 500">{{ outletData.outletName }}</p>
-                <!-- <a class="custom" href=""><span>Menu</span></a> -->
-              </div>
-              <div class="col-sm-2 m-0 p-0 d-grid justify-content-end">
-                <h6><b>Verified</b></h6>
-                <p style="color: #76a05b; font-size: 15px; font-weight: 500">{{ outletData.isVerified ? "Yes" : "No" }}</p>
-                <!-- <a href="">Earning</a> -->
-              </div>
-              <div class="col-sm-2 m-0 p-0 d-grid justify-content-end">
-                <h6><b>Opening Time</b></h6>
-                <p style="color: #76a05b; font-size: 15px; font-weight: 500">{{ openingTime }}</p>
-                <!-- <a href="">Offers</a> -->
-              </div>
-              <div class="col-sm-2 m-0 p-0 d-grid justify-content-end">
-                <h6><b>Closing Time</b></h6>
-                <p style="color: #76a05b; font-size: 15px; font-weight: 500">{{ closingTime }}</p>
-                <!-- <a href="">Out of Stock</a> -->
-              </div>
-              <div class="column m-0 p-0 d-grid justify-content-end">
-                <div class="container-fluid pt-5 m-0 pl-0 pr-0">
-                  <div class="col-md-12 p-0 m-0 ml-0">
-                    <a class="ml-5">Menu</a>
-                    <a class="ml-5">Earning</a>
-                    <a class="ml-5 view-btn" href="javascript:void(0);">Offers</a>
-                    <a class="ml-5 view-btn" href="javascript:void(0);" [ngClass]="{ 'nav-active': showNewCard1 }" (click)="createNewCard1()">Order History</a>
-                    <a class="ml-5">Out of Stock</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ORDER-HISTORY -->
-      <div class="parent d-flex">
-        <div class="col-md-5 p-0" *ngIf="showNewCard1" id="newCardTemplate1">
-          <div class="pl-0 pr-0">
-            <div class="card card-congtrats d-grid align-items-center">
-              <div class="m-1">
-                <div class="media-custom d-flex justify-content-between">
-                  <div class="ready-btn">
-                    <a href="">Ready</a>
-                  </div>
-                  <div class="order-detail d-flex">
-                    <h5 class="mb-0">Order By : <span>Sahil Singh</span></h5>
-                    <h5 class="mb-0">ID : <span>7ac841</span></h5>
-                  </div>
-                </div>
-              </div>
-              <div class="order-border"></div>
-              <div class="btn-parent d-flex justify-content-between m-1">
-                <div class="date mb-0">
-                  <p>17 August | 04:30 PM</p>
-                </div>
-                <div class="area">
-                  <a class="mb-0" href="javascript:void(0);" (click)="createNewCard()">View More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-7 pr-0" *ngIf="showNewCard" id="newCardTemplate ">
-          <!-- New card content -->
-          <div class="pl-0 pr-0">
-            <div class="card card-view d-grid align-items-center">
-              <div class="m-1">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="media-custom d-flex justify-content-between col-md-7">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="ready-btn ml-0 pl-0 pt-1">
-                            <h5>Order Timeline</h5>
-                          </div>
-                          <img class="pl-0" src="assets/images/icons/image (5).png" alt="" />
-                          <div class="par d-flex pt-5 pl-0 pr-0">
-                            <div class="col-sm-2 p-0 m-0 d-grid">
-                              <h6>Pending</h6>
-                              <p style="font-size: 15px; font-weight: 500">10:30 am</p>
-                            </div>
-                            <div class="col-sm-2 m-0 p-0 d-grid">
-                              <h6>Prepairing</h6>
-                              <p style="font-size: 15px; font-weight: 500">10:30 am</p>
-                            </div>
-                            <div class="col-sm-2 m-0 p-0 d-grid">
-                              <h6>Ready</h6>
-                              <p style="font-size: 15px; font-weight: 500">10:30 am</p>
-                            </div>
-                            <div class="col-sm-2 m-0 p-0 d-grid">
-                              <h6>Dispatched</h6>
-                              <p style="font-size: 15px; font-weight: 500">22:30 pm</p>
-                            </div>
-                            <div class="col-sm-2 m-0 p-0 d-grid">
-                              <h6>Delivered</h6>
-                              <p style="font-size: 15px; font-weight: 500">22:30 pm</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-5 pt-1">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="food d-flex justify-content-between">
-                            <p>Margherita Pizza X 2</p>
-                            <p>Rs. 1080</p>
-                          </div>
-                          <div class="food d-flex justify-content-between">
-                            <p>Margherita Pizza X 2</p>
-                            <p>Rs. 1080</p>
-                          </div>
-                          <div class="food d-flex justify-content-between pt-1">
-                            <p style="color: #76a05b; font-size: 15px; font-weight: 500">Taxes</p>
-                            <p>Rs. 1080</p>
-                          </div>
-                          <div class="food d-flex justify-content-between">
-                            <p style="color: #76a05b; font-size: 15px; font-weight: 500">Discount</p>
-                            <p>Rs. 1080</p>
-                          </div>
-                          <div class="food d-flex justify-content-between">
-                            <p style="color: #76a05b; font-size: 15px; font-weight: 500">Total Bill <span style="background-color: #ffd3d3; padding: 2px 8px; color: red; font-size: 13px; font-weight: 500">Not Collected</span></p>
-                            <p>Rs. 1080</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</div>
-
-<!-- opne offer list Modal -->
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h5 class="modal-title" id="myModalLabel160"></h5>
-    <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body" tabindex="0">
-    <div class="row">
-      <div class="col-2" *ngIf="outletOffer">
-        <h4 class="card-title">Outlet Offer</h4>
-        <div class="mt-5 card offer-box">
-          <div class="card-body">
-            <h3>{{ outletOffer.discountTitle }}</h3>
-            <div class="d-flex align-items-baseline justify-content-between pb-1 pl-1 pl-md-0 pb-md-0">
-              <button class="btn btn-offer-edit" (click)="openEditOfferModal(content1, offer)" rippleEffect>
-                <i class="fa-regular fa-pen-to-square"></i>
-              </button>
-              <button class="btn btn-offer-delete" (click)="openUnlinkModal(content2)" rippleEffect>
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-
-            <a class="offer-outlet">
-              <p>Apply this offer & get flat {{ outletOffer.discountPercent }}% OFF on this order, order above ₹{{ outletOffer.minAmount }} No upper limit</p>
-              <h4>{{ outletOffer.discountPercent }}%</h4>
-              <h5>OFF</h5>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-10">
-        <section id="ngx-datatable-kitchen-sink">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <h4 class="card-title">Seller Offer List</h4>
-              </div>
-              <div class="row">
-                <div class="col-12 mb-50"></div>
-                <div class="col-md-6 col-12">
-                  <div class="d-flex justify-content-between align-items-center m-1">
-                    <label class="d-flex align-items-center"
-                      >Show
-                      <select class="form-control mx-25" [(ngModel)]="basicSelectedOption">
-                        <option value="5">5</option>
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                      </select>
-                      entries</label
-                    >
-                  </div>
-                </div>
-                <div class="col-md-6 col-12 d-flex justify-content-md-end">
-                  <div class="d-flex align-items-center justify-content-end pr-1 pb-1 pl-1 pl-md-0 pb-md-0">
-                    <label class="d-flex align-items-center">Search<input type="search" placeholder="Search" class="form-control ml-25" (keyup)="filterUpdate($event)" (search)="filterUpdate($event)" /> </label>
-                  </div>
-                </div>
-              </div>
-              <ngx-datatable class="material container striped" [columns]="cols" [rows]="kitchenSinkRows" [rowHeight]="58" rowHeight="auto" class="bootstrap core-bootstrap" [columnMode]="ColumnMode.force" [headerHeight]="40" [footerHeight]="50" [scrollbarH]="true" [selectionType]="SelectionType.checkbox" [limit]="basicSelectedOption" (select)="onSelect($event)">
-                <ngx-datatable-column name="S.No." [width]="50" [sortable]="false">
-                  <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row">
-                    {{ rowIndex + 1 }}
-                  </ng-template>
-                </ngx-datatable-column>
-                <ngx-datatable-column name="Discount Title" prop="discountTitle" [width]="100"></ngx-datatable-column>
-                <ngx-datatable-column name="Promo Code" prop="promoCode" [width]="100"></ngx-datatable-column>
-                <ngx-datatable-column name="Discount %" prop="discountPercent" [width]="100"></ngx-datatable-column>
-                <ngx-datatable-column name="Max Discount" prop="maxDiscount" [width]="100" [sortable]="false"></ngx-datatable-column>
-                <ngx-datatable-column name="Min Amount" prop="minAmount" [width]="100" [sortable]="false"></ngx-datatable-column>
-                <ngx-datatable-column name="Flat Discount" prop="isFlatDiscount" [width]="100" [sortable]="false"></ngx-datatable-column>
-                <ngx-datatable-column name="Action" prop="Action" [width]="50" [sortable]="false" class="badge badge-light-success badge-pill">
-                  <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
-                    <button class="btn btn-primary" (click)="openLinkOfferModal(content1, row)">APPLY</button>
-                  </ng-template>
-                </ngx-datatable-column>
-              </ngx-datatable>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</ng-template>
-
-<!-- open link offer to outlet Modal -->
-<ng-template #content1 let-modal>
-  <div class="modal-header">
-    <h5 class="modal-title" id="myModalLabel160">Link Offer to Outlet</h5>
-    <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body" tabindex="0">Are You Sure You Want to Apply this offer to the current outlet.</div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Cancel</button>
-    <button type="button" class="btn btn-primary" (click)="linkOffer(); modal.close()">Confirm</button>
-  </div>
-</ng-template>
-
-<!-- open unlink offer from outlet Modal -->
-<ng-template #content2 let-modal>
-  <div class="modal-header">
-    <h5 class="modal-title" id="myModalLabel160">Unlink Offer From Outlet</h5>
-    <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body" tabindex="0">Are You Sure You Want to Unlink</div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Cancel</button>
-    <button type="button" class="btn btn-primary" (click)="unLinkOffer(); modal.close()">Confirm</button>
-  </div>
-</ng-template>
-
-<!-- open out of stock product Modal -->
-<ng-template #content3 let-modal>
-  <div class="modal-header">
-    <h5 class="modal-title" id="myModalLabel160"></h5>
-    <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body" tabindex="0">
-    <section id="ngx-datatable-kitchen-sink">
       <div class="card">
-        <div class="card-body">
-          <div class="d-flex justify-content-between">
-            <h4 class="card-title">Out Of stock Products</h4>
+        <div class="card-header">
+          <h4 class="card-title"></h4>
+          <div class="outlet-btn-sec">
+            <button class="btn"><span>Offers</span></button>
+            <button class="btn"><span>Order History</span> </button>
+            <button class="btn"><span>Menu</span></button>
+            <button class="btn"><span>Out of Stock</span> </button>
           </div>
-          <div class="row">
-            <div class="col-12 mb-50"></div>
-            <div class="col-md-6 col-12">
-              <div class="d-flex justify-content-between align-items-center m-1">
-                <label class="d-flex align-items-center"
-                  >Show
-                  <select class="form-control mx-25" [(ngModel)]="basicSelectedOption">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                  </select>
-                  entries</label
-                >
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="nav-vertical">
+              <div class="card card-profile1">
+                <div class="card-body">
+                  <div class="column-parent d-flex" style="gap: 20px;">
+                    <div class="image">
+                      <img [src]="outletData?.outletImage" alt="Profile Picture"/>
+                    </div>
+                    <div class="outlet-name-details">
+                      <h1>{{ outletData.outletName }}</h1>
+                      <h6 class="text-muted">{{ outletData.shopAddress }}</h6>
+                      <div class="badge badge-light-primary profile-badge">palasia</div>
+                    </div>
+                  </div>
+                  <div class="details-parent d-flex justify-content-between">
+                    <div class="details-parent col-md-4">
+                      <div class="card-body11">
+                        <div class="heading d-flex justify-content-between align-items-center">
+                          <div class="heading1">
+                            <h3>Basic Details</h3>
+                          </div>
+                          <hr class="mb-1">
+                        </div>
+                        <hr>
+                        <div class=" card-transaction">
+                          <div class="card-body1">
+                            <div class="transaction-item">
+                              <div class="media">
+                                <div class="media-body">
+                                  <h6 class="transaction-title">Seller Name:</h6>
+                                </div>
+                              </div>
+                              <div class="details">asgjkdv</div>
+                            </div>
+                            <div class="transaction-item">
+                              <div class="media">
+                                <div class="media-body">
+                                  <h6 class="transaction-title">Trade Name:</h6>
+                                </div>
+                              </div>
+                              <div class="details">svn </div>
+                            </div>
+                            <div class="transaction-item">
+                              <div class="media">
+                                <div class="media-body">
+                                  <h6 class="transaction-title">Seller Type:</h6>
+                                </div>
+                              </div>
+                              <div class="details">scnk sdah</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="details-parent col-md-4">
+                      <div class="card-body11">
+                        <div class="heading d-flex justify-content-between align-items-center">
+                          <div class="heading1">
+                            <h3>Outlet Timing</h3>
+                          </div>
+                          <hr class="mb-1">
+                        </div>
+                        <hr>
+                        <div class=" card-transaction">
+                          <div class="card-body1">
+                            <div class="transaction-item">
+                              <div class="media">
+
+                                <div class="media-body">
+                                  <h6 class="transaction-title">Opening Time:</h6>
+                                </div>
+                              </div>
+                              <div class="details">{{ openingTime }}</div>
+                            </div>
+                            <div class="transaction-item">
+                              <div class="media">
+                                <div class="media-body">
+                                  <h6 class="transaction-title">Closing Time:</h6>
+                                </div>
+                              </div>
+                              <div class="details">{{ closingTime }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="details-parent col-md-4">
+                      <div class="card-body11">
+                        <div class="heading d-flex justify-content-between align-items-center">
+                          <div class="heading1">
+                            <h3>Contact Details</h3>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class=" card-transaction">
+                          <div class="card-body1">
+                            <div class="transaction-item">
+                              <div class="media">
+                                <div class="media-body">
+                                  <h6 class="transaction-title">Phone:</h6>
+                                  <!-- <small>Starbucks</small> -->
+                                </div>
+                              </div>
+                              <div class="details">12345678992</div>
+                            </div>
+                            <div class="transaction-item">
+                              <div class="media">
+                                <div class="media-body">
+                                  <h6 class="transaction-title">Email:</h6>
+                                </div>
+                              </div>
+                              <div class="details">anjali@gmail.com</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-6 col-12 d-flex justify-content-md-end">
-              <div class="d-flex align-items-center justify-content-end pr-1 pb-1 pl-1 pl-md-0 pb-md-0">
-                <label class="d-flex align-items-center"
-                  >Search
-                  <input type="search" placeholder="Search" class="form-control ml-25" (keyup)="filterUpdate($event)" (search)="filterUpdate($event)" />
-                </label>
-              </div>
-            </div>
           </div>
-          <ngx-datatable class="material container striped" [columns]="cols" [rows]="kitchenSinkRows2" [rowHeight]="58" rowHeight="auto" class="bootstrap core-bootstrap" [columnMode]="ColumnMode.force" [headerHeight]="40" [footerHeight]="50" [scrollbarH]="true" [selectionType]="SelectionType.checkbox" [limit]="basicSelectedOption" (select)="onSelect($event)">
-            <ngx-datatable-column name="S.No." [width]="50" [sortable]="false">
-              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row">
-                {{ rowIndex + 1 }}
-              </ng-template>
-            </ngx-datatable-column>
-            <ngx-datatable-column name="Product Name" prop="productName" [width]="150"></ngx-datatable-column>
-            <!--   <ngx-datatable-column name="In Stock" prop="inStock" [width]="100"></ngx-datatable-column> -->
-            <ngx-datatable-column name="Action" prop="Action" [width]="50" [sortable]="false" class="badge badge-light-success badge-pill">
-              <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
-                <button class="btn btn-primary" (click)="openChangStockModal(content4, row)">In Stock</button>
-              </ng-template>
-            </ngx-datatable-column>
-          </ngx-datatable>
         </div>
       </div>
     </section>
   </div>
-  <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Cancel</button>
-        <button type="button" class="btn btn-primary" (click)="unLinkOffer(); modal.close()">Confirm</button>
-    </div> -->
-</ng-template>
-
-<!-- open change stock Modal -->
-<ng-template #content4 let-modal>
-  <div class="modal-header">
-    <h5 class="modal-title" id="myModalLabel160">Update Stock</h5>
-    <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body" tabindex="0">Are You Sure You Want to Update</div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Cancel</button>
-    <button type="button" class="btn btn-primary" (click)="chnageStockStatus()">Confirm</button>
-  </div>
-</ng-template>
-
-<ng-template #content5 let-modal>
-  <div class="modal-header">
-    <h5 class="modal-title" id="myModalLabel160">Outlet Earning</h5>
-    <button type="button" class="close" (click)="modal.dismiss('Cross click')" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-
-  <div class="modal-body" tabindex="0">
-    <div class="row">
-      <div class="align-items-center date-range mr-1">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <ng2-flatpickr [config]="DateRangeOptions" name="DateRange" placeholder="Date" (change)="getDate($event)"></ng2-flatpickr>
-        </div>
-      </div>
-      <div class="earning col-lg-5 col-md-5 col-sm-12">
-        <div class="earning-data col-lg-5">
-          <p><strong>Total Sale:</strong></p>
-        </div>
-        <div class="col-lg-7">
-          <p>₹ {{ outletEarnings.totalSale }}</p>
-        </div>
-      </div>
-      <div class="earning col-lg-5 col-md-5 col-sm-12">
-        <div class="earning-data col-lg-5">
-          <p><strong>Order Count:</strong></p>
-        </div>
-        <div class="col-lg-7">
-          <p>{{ outletEarnings.orderCount }}</p>
-        </div>
-      </div>
-      <div class="earning col-lg-5 col-md-5 col-sm-12">
-        <div class="earning-data col-lg-5">
-          <p><strong>Total Discount:</strong></p>
-        </div>
-        <div class="col-lg-7">
-          <p>₹ {{ outletEarnings.totalDiscount }}</p>
-        </div>
-      </div>
-      <div class="earning col-lg-5 col-md-5 col-sm-12">
-        <div class="earning-data col-lg-5">
-          <p><strong>Net Profit:</strong></p>
-        </div>
-        <div class="col-lg-7">
-          <p>₹ {{ outletEarnings.netProfit }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</ng-template>
-
+</div>  
