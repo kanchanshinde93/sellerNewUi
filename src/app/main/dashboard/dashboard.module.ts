@@ -21,6 +21,7 @@ import { NewmenuComponent } from "./newmenu/newmenu.component";
 import { BlockUIComponent, BlockUIModule } from "ng-block-ui";
 import { AccountComponent } from './account/account.component';
 import { CoreCommonModule } from '@core/common.module';
+import { OfferComponent } from './outlet/offer/offer.component';
 
 
 
@@ -83,6 +84,10 @@ const routes: Routes = [
     path: "account",
     component: AccountComponent,
   },
+  {
+    path:"offer",
+    component:OfferComponent
+  }
 ];
 
 @NgModule({
@@ -98,6 +103,7 @@ const routes: Routes = [
     MenuComponent,
     NewmenuComponent,
     AccountComponent,
+    OfferComponent,
     
   ],
   imports: [

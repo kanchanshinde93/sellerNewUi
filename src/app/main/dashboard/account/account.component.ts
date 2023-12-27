@@ -22,4 +22,5 @@ export class AccountComponent implements OnInit {
       this.sellerData = data.items;
     });
   }
+
 }

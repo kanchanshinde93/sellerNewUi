@@ -284,4 +284,5 @@ export class OutletDetailsComponent implements OnInit {
     this.kitchenSinkRows2 = temp;
     this.table.offset = 0;
   }
+ 
 }
