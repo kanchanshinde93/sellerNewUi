@@ -128,11 +128,6 @@ export class MenuComponent implements OnInit {
     private router: Router
   ) {
     let nav: Navigation = this.router.getCurrentNavigation();
-    if (nav.extras && nav.extras.state && nav.extras.state.outletData) {
-      this.outletData = nav.extras.state.outletData;
-    } else {
-      this.router.navigate(["/dashboard/allOutlet"]);
-    }
   }
 
   ngOnInit(): void {

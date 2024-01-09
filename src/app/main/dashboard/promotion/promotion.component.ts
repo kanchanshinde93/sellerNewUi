@@ -171,6 +171,12 @@ export class PromotionComponent implements OnInit {
       centered:true
     });
   }
+  addOffer(addOfferModal){
+    this.modalService.open(addOfferModal, {
+      windowClass: "modal",
+      centered:true
+    });
+  }
 
   
 }

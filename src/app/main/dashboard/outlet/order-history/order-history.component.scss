@@ -1,7 +1,12 @@
 .sticky-element {
     position: sticky;
-    top: 0; /* or any other value to set the offset from the top */
-    /* Additional styling properties */
+    top: 0; 
     background-color: #f1f1f1;
     padding: 10px;
   }
+
+.d-flex.align-items-center.justify-content-between.pb-1.pl-1.pl-md-0.pb-md-0 {
+  padding-top: 25px;
+  float: right;
+}
+

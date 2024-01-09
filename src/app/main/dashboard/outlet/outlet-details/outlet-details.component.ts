@@ -284,5 +284,24 @@ export class OutletDetailsComponent implements OnInit {
     this.kitchenSinkRows2 = temp;
     this.table.offset = 0;
   }
- 
-}
+
+  goToNewComponent(): void {
+    this.router.navigate(['/offer']);
+  }
+  newhistory(): void{
+    this.router.navigate(['/orderHistory']);
+  }
+  openMenu(): void{
+    this.router.navigate(['/dashboard/menu']);
+  }
+  OutOfStock(): void{
+    this.router.navigate(['/dashboard/OutOfStock']);
+  }
+  // deleteOutlet(model:any,data:any){
+  //   this.modalRef = this.modalService.open({
+  //     centered:true,
+  //     scrollable:true,
+  //     size:'md'
+  //   });
+  // }
+ }

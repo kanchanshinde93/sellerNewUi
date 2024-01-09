@@ -1,0 +1,23 @@
+.card.card-employee-task {
+    background-color: white;
+    margin-left: 11px;
+    box-shadow: 4px 8px 15px -3px rgb(201 199 199/ 75%);
+    -webkit-box-shadow: 4px 8px 15px -3px rgb(201 199 199 / 75%);
+    -moz-box-shadow: 4px 8px 15px -3px rgba(201, 199, 199, 0.75);
+}
+.card .card-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: none;
+    padding: 1.5rem;
+    box-shadow: 4px 8px 15px -3px rgb(201 199 199/ 75%);
+    /* -webkit-box-shadow: 4px 8px 15px -3px rgb(201 199 199 / 75%); */
+    -moz-box-shadow: 4px 8px 15px -3px rgba(201, 199, 199, 0.75);
+    background-color: transparent;
+}
+.order {
+    padding-top: 30px;
+}

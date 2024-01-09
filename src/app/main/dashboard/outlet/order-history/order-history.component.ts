@@ -44,11 +44,11 @@ export class OrderHistoryComponent implements OnInit {
   orderDetails: any;
   constructor(private outletService: OutletServiceService, private toastr:ToastrserviceService , private fb:FormBuilder ,private modalService: NgbModal , private router: Router) {
     let nav: Navigation = this.router.getCurrentNavigation();
-    if (nav.extras && nav.extras.state && nav.extras.state.outletData) {
-      this.outletData = nav.extras.state.outletData;
-    } else {
-      this.router.navigate(["/dashboard/allOutlet"]);
-    }
+    // if (nav.extras && nav.extras.state && nav.extras.state.outletData) {
+    //   this.outletData = nav.extras.state.outletData;
+    // } else {
+    //   this.router.navigate(["/dashboard/allOutlet"]);
+    // }
   }
 
   ngOnInit(): void {

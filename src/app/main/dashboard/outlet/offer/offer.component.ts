@@ -11,5 +11,4 @@ export class OfferComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

@@ -22,6 +22,9 @@ import { BlockUIComponent, BlockUIModule } from "ng-block-ui";
 import { AccountComponent } from './account/account.component';
 import { CoreCommonModule } from '@core/common.module';
 import { OfferComponent } from './outlet/offer/offer.component';
+import { OutOfStockComponent } from './outlet/out-of-stock/out-of-stock.component';
+
+
 
 
 
@@ -87,6 +90,10 @@ const routes: Routes = [
   {
     path:"offer",
     component:OfferComponent
+  },
+  {
+    path:"OutOfStock",
+    component:OutOfStockComponent
   }
 ];
 
@@ -104,6 +111,7 @@ const routes: Routes = [
     NewmenuComponent,
     AccountComponent,
     OfferComponent,
+    OutOfStockComponent,
     
   ],
   imports: [
